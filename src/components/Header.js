@@ -14,7 +14,14 @@ function Header() {
       <a>
         <img src='/images/logo.svg' alt='' />
       </a>
-      <Menu>{cars && cars.map((car, index) => <a href='#'>{car}</a>)}</Menu>
+      <Menu>
+        {cars &&
+          cars.map((car, index) => (
+            <a href='#' key={index}>
+              {car}
+            </a>
+          ))}
+      </Menu>
       <RightMenu>
         <a href='#'>Shop</a>
         <a href='#'>Tesla Account</a>
